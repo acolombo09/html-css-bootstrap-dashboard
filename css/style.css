@@ -1,0 +1,48 @@
+body{
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  height: 90px;
+}
+
+main{
+  height: calc(100vh - 90px);
+}
+
+.sidebar{
+  width: 75px;
+  height: 100%;
+  background-color: #051e34;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .nav{
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: rgb(45, 45, 45);
+}
+
+.sidebar .nav-hover .nav-link{
+  text-align: center;
+}
+
+.sidebar .nav-hover .nav-link:hover{
+  background-color: white;
+}
+
+@media screen and (min-width: 768px){
+  .sidebar{
+    width: 150px;
+  }
+  .sidebar .nav-link i{
+    margin-right: .5rem;
+  }
+  .sidebar .nav-hover .nav-link{
+    text-align: left;
+  }
+}
