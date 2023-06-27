@@ -17,30 +17,37 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <header>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-sm navbar-secondary bg-light align-items-center border border-2 border-danger">
-      <div class="container-fluid border border-primary flex-grow-1 flex-nowrap">
+    <nav class="navbar navbar-expand-sm navbar-secondary bg-light align-items-center">
+      <div class="container-fluid flex-grow-1 flex-nowrap">
         <a class="navbar-brand" href="#">
           <img class="d-md-none" src="/img/mobile-logo.png" alt="mobile logo" style="width:50px;"> 
           <img class="d-none d-md-block" src="/img/logo.svg" alt="logo" style="width:130px;"> 
         </a>
         <form class="d-flex flex-grow-1 flex-basis-0" role="search">
-          <input class="form-control me-3" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
+          <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input class="form-control me-3" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search" id="Search">
         </form>
-        <div class="collapse navbar-collapse" id="mynavbar">
+        <div class="collapse navbar-collapse flex-grow-0" id="mynavbar">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Link</a>
+              <a class="nav-link" href="javascript:void(0)">
+                <i class="fa-solid fa-list"></i>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Link</a>
+              <a class="nav-link" href="javascript:void(0)">
+                <i class="fa-solid fa-circle-question"></i>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="javascript:void(0)">Link</a>
+              <a class="nav-link" href="javascript:void(0)">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </a>
             </li>
           </ul>
         </div>
-        <div class="dropdown text-end">
-          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="dropdown text-end ms-2">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="fa-solid fa-bell text-warning"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end text-small" style>
@@ -52,7 +59,7 @@
       </div>
     </nav>
   </header>
-  <div class="d-flex flex-row flex-grow-1 overflow-hidden border border-2 border-danger">
+  <div class="d-flex flex-row flex-grow-1 overflow-hidden">
     <!-- SIDEBAR -->
     <div class="sidebar px-md-3 py-4 flex-shrink-0 text-white">
       <ul class="nav nav-hover flex-column">
@@ -64,13 +71,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            <i class="fa-solid fa-home"></i>
+            <i class="fa-solid fa-chart-column"></i>
             <span class="d-none d-md-inline-block">Stats</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            <i class="fa-solid fa-home"></i>
+            <i class="fa-solid fa-chart-simple"></i>
             <span class="d-none d-md-inline-block">Signals</span>
           </a>
         </li>
@@ -78,7 +85,7 @@
       <ul class="nav nav-hover flex-column"> 
         <li class="nav-item">
           <a class="nav-link">
-            <i class="fa-solid fa-home"></i>
+            <i class="fa-solid fa-gear"></i>
             <span class="d-none d-md-inline-block">Admin</span>
           </a>
         </li>
@@ -86,9 +93,9 @@
     </div>
     <!-- MAIN CONTENT (RIGHT SECTION) -->
     <main class="overflow-auto d-flex flex-column">
-      <div class="container-fluid bg-primary border border-primary">
+      <div class="container-fluid bg-primary">
         <!-- Sezione Blu, upper dashboard -->  
-        <div class="row d-flex border border-2 border-danger">
+        <div class="row d-flex">
           <div class="col-12 col-md-6 border border-success" style="min-height: 100px;">
 
           </div>
@@ -100,9 +107,9 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid border border-primary">
-        <div class="row d-flex flex-row bg-info border border-2 border-danger">
-          <div class="col-12 col-md-8 border border-success" style="min-height: 100px;">
+      <div class="container-fluid">
+        <div class="row d-flex flex-row">
+          <div class="col-12 col-md-8" style="min-height: 100px;">
             <!-- TABELLA PROSSIME CLASSI -->
             <div class="card mt-3 mb-3">
               <div class="card-header">
@@ -112,41 +119,149 @@
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                      <th scope="col">Azioni</th>
+                      <td scope="col" style="width:60%">Nome</td>
+                      <td scope="col">Data inizio</td>
+                      <td scope="col">ROI</td>
+                      <td scope="col">Stato</td>
+                      <td scope="col">Azioni</td>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>@twitter</td>
+                      <td scope="row">
+                        <img src="/img/class-avatar.jpg" alt="bool-vatar" style="width:21px;">
+                        <span>Classe 75</span>
+                      </td>
+                      <td>15 Feb 2021</td>
+                      <td>20%</td>
+                      <td><span class="badge text-bg-success rounded-pill">Done</span></td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>@twitter</td>
+                      <td scope="row">
+                        <img src="/img/class-avatar.jpg" alt="bool-vatar" style="width:21px;">
+                        <span>Classe 76</span>
+                      </td>
+                      <td>16 Feb 2021</td>
+                      <td>20%</td>
+                      <td><span class="badge text-bg-success rounded-pill">Done</span></td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">3</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>@twitter</td>
+                      <td scope="row">
+                        <img src="/img/class-avatar.jpg" alt="bool-vatar" style="width:21px;">
+                        <span>Classe 77</span>
+                      </td>
+                      <td>17 Feb 2021</td>
+                      <td>20%</td>
+                      <td><span class="badge text-bg-warning rounded-pill">process</span></td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
                     </tr>
                     <tr>
-                      <th scope="row">4</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>@twitter</td>
+                      <td scope="row">
+                        <img src="/img/class-avatar.jpg" alt="bool-vatar" style="width:21px;">
+                        <span>Classe 78</span>
+                      </td>
+                      <td>18 Feb 2021</td>
+                      <td>20%</td>
+                      <td><span class="badge text-bg-success rounded-pill">Done</span></td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">
+                        <img src="/img/class-avatar.jpg" alt="bool-vatar" style="width:21px;">
+                        <span>Classe 79</span>
+                      </td>
+                      <td>19 Feb 2021</td>
+                      <td>20%</td>
+                      <td><span class="badge text-bg-danger rounded-pill">failed</span></td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">
+                        <img src="/img/class-avatar.jpg" alt="bool-vatar" style="width:21px;">
+                        <span>Classe 80</span>
+                      </td>
+                      <td>20 Feb 2021</td>
+                      <td>20%</td>
+                      <td><span class="badge text-bg-success rounded-pill">Done</span></td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">
+                        <img src="/img/class-avatar.jpg" alt="bool-vatar" style="width:21px;">
+                        <span>Classe 81</span>
+                      </td>
+                      <td>21 Feb 2021</td>
+                      <td>20%</td>
+                      <td><span class="badge text-bg-danger rounded-pill">failed</span></td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td scope="row">
+                        <img src="/img/class-avatar.jpg" alt="bool-vatar" style="width:21px;">
+                        <span>Classe 82</span>
+                      </td>
+                      <td>22 Feb 2021</td>
+                      <td>20%</td>
+                      <td><span class="badge text-bg-success rounded-pill">Done</span></td>
+                      <td>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -193,7 +308,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 border border-success" style="min-height: 100px;">
+          <div class="col-12 col-md-4" style="min-height: 100px;">
             <!-- LIST GROUP TO-DO-->
             <div class="card mt-3 mb-3">
               <div class="card-header">

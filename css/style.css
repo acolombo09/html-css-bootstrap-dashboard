@@ -24,6 +24,7 @@ header .navbar{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url(.//Boolean/Projects/html-css-bootstrap-dashboard/img/sidebar-bg.png);
 }
 
 .sidebar .nav{
@@ -40,7 +41,6 @@ header .navbar{
 }
 
 main{
-  border: 2px dashed green;
   width: calc(100vw - 75px);
 }
 
