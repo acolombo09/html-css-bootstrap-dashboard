@@ -44,6 +44,16 @@ main{
   width: calc(100vw - 75px);
 }
 
+.td-remove{
+  visibility: hidden;
+}
+
+@media screen and (min-width: 576px){
+  .td-remove{
+    visibility: visible;
+  }
+}
+
 @media screen and (min-width: 768px){
   .sidebar{
     width: 150px;
