@@ -48,6 +48,15 @@ main{
   visibility: hidden;
 }
 
+.span-remove{
+  display: inline;
+}
+
+.badge-remove{
+  display: none;
+  font-size: .6rem;
+}
+
 @media screen and (min-width: 576px){
   .td-remove{
     visibility: visible;
@@ -67,5 +76,13 @@ main{
 
   main{
     width: calc(100vw - 150px);
+  }
+
+  .span-remove{
+    display: none;
+  }
+
+  .badge-remove{
+    display: inline-block;
   }
 }
