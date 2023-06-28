@@ -109,24 +109,26 @@
                   </div>
                   <div class="offcanvas-body">
                     <div class="row g-5">
-                      <div class="col-md-7 col-lg-8">
+                      <div class="col-12">
                         <form class="needs-validation" novalidate="">
                           <div class="row g-3">
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                               <label for="firstName" class="form-label">Nome</label>
                               <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                               <div class="invalid-feedback">
                                 Valid first name is required.
                               </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                               <label for="lastName" class="form-label">Cognome</label>
                               <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
                               <div class="invalid-feedback">
                                 Valid last name is required.
                               </div>
                             </div>
-                            <div class="col-12">
+                          </div>
+                          <div class="row g-3">
+                            <div class="col-12 col-md-6">
                               <label for="username" class="form-label">Email</label>
                               <div class="input-group has-validation">
                                 <span class="input-group-text">@</span>
@@ -136,13 +138,15 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 col-md-6">
                               <label for="email" class="form-label">Password</label>
                               <input type="email" class="form-control" id="email" placeholder="">
                               <div class="invalid-feedback">
                                 Please enter a valid email address for shipping updates.
                               </div>
                             </div>
+                          </div>
+                          <div class="row g-3">
                             <div class="col-12">
                               <label for="address" class="form-label">Indirizzo</label>
                               <input type="text" class="form-control" id="address" placeholder="" required="">
@@ -150,11 +154,13 @@
                                 Please enter your shipping address.
                               </div>
                             </div>
-                            <div class="col-12">
+                          </div>  
+                          <div class="row g-3">
+                            <div class="col-12 col-md-6">
                               <label for="address2" class="form-label">Città</label>
                               <input type="text" class="form-control" id="address2" placeholder="">
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-12 col-md-4">
                               <label for="country" class="form-label">Stato</label>
                               <select class="form-select" id="country" required="">
                                 <option value="">Scegli...</option>
@@ -164,13 +170,15 @@
                                 Please select a valid country.
                               </div>
                             </div>
-                            <div class="col-12 col-md-3">
+                            <div class="col-12 col-md-2">
                               <label for="zip" class="form-label">CAP</label>
                               <input type="text" class="form-control" id="zip" placeholder="" required="">
                               <div class="invalid-feedback">
                                 Zip code required.
                               </div>
                             </div>
+                          </div>  
+                          <div class="row g-3">
                             <div class="col-12">
                               <label for="basic-url" class="form-label">Foto</label>
                               <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
@@ -181,14 +189,14 @@
                                 <label class="form-check-label" for="same-address">Seleziona per proseguire</label>
                               </div>
                             </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-2">
-                                  <button class="btn btn-small btn-primary" type="submit">Salva</button>
-                                </div>
-                                <div class="col-2">
-                                  <button class="btn btn-small btn-warning" type="submit">Svuota</button>
-                                </div>
+                          </div> 
+                          <div class="col-12 mt-3 mb-3">
+                            <div class="row">
+                              <div class="col-2">
+                                <button class="btn btn-small btn-primary" type="submit">Salva</button>
+                              </div>
+                              <div class="col-2">
+                                <button class="btn btn-small btn-warning" type="submit">Svuota</button>
                               </div>
                             </div>
                           </div>
